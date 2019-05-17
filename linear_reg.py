@@ -45,5 +45,6 @@ seed =5
 X_train,X_test,Y_train,Y_test=train_test_split(share_point,share_value,test_size=test_size,random_state=seed)
 model=LinearRegression()
 model.fit(X_train,Y_train)
-
+predict=model.score(X_test,Y_test)
+print("accuracy: %3f%%"%(predict*100))
 
